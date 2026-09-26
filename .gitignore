@@ -12,3 +12,14 @@ eval_bundle/
 CLAUDE.md
 wandb/
 .DS_Store
+
+# Assignment: local environment, caches and large artifacts
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+*.before_assignment1_mps_fix
+*.pt
+*.pth
+*.parquet
+*.zip

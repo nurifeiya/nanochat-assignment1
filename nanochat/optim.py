@@ -41,6 +41,13 @@ def adamw_step_fused(
     # Some params (wte, value_embeds) are stored in bf16, so do the math in fp32 and
     # cast back at the end. MPS errors on mixed-dtype ops (CUDA promotes them), and
     # scalar arithmetic like 1 - beta2 loses all precision in bf16. compile fuses the casts.
+    # Assignment 1: Python scalars for eager MPS optimizer operations.
+    # These scalar tensors live on CPU for the compiled CUDA path.
+    # Eager MPS lerp_ requires a same-device tensor or a Python number.
+    if p.device.type == 'mps':
+        step_t, lr_t, beta1_t, beta2_t, eps_t, wd_t = (
+            scalar.item() for scalar in (step_t, lr_t, beta1_t, beta2_t, eps_t, wd_t)
+        )
     p32 = p.float()
     exp_avg32 = exp_avg.float()
     exp_avg_sq32 = exp_avg_sq.float()
@@ -128,7 +135,7 @@ def muon_step_fused(
     """
 
     # Nesterov momentum
-    momentum = momentum_t.to(stacked_grads.dtype)
+    momentum = momentum_t.item() if stacked_grads.device.type == 'mps' else momentum_t.to(stacked_grads.dtype)
     momentum_buffer.lerp_(stacked_grads, 1 - momentum)
     g = stacked_grads.lerp_(momentum_buffer, momentum)
 
@@ -161,7 +168,7 @@ def muon_step_fused(
     g = g * (target_norm / current_norm).to(g.dtype)
 
     # Variance reduction
-    beta2 = beta2_t.to(g.dtype)
+    beta2 = beta2_t.item() if g.device.type == 'mps' else beta2_t.to(g.dtype)
     v_mean = g.float().square().mean(dim=red_dim, keepdim=True)
     red_dim_size = g.size(red_dim)
     v_norm_sq = v_mean.sum(dim=(-2, -1), keepdim=True) * red_dim_size
@@ -174,8 +181,8 @@ def muon_step_fused(
     g = g * final_scale.to(g.dtype)
 
     # Cautious weight decay + parameter update
-    lr = lr_t.to(g.dtype)
-    wd = wd_t.to(g.dtype)
+    lr = lr_t.item() if g.device.type == 'mps' else lr_t.to(g.dtype)
+    wd = wd_t.item() if g.device.type == 'mps' else wd_t.to(g.dtype)
     mask = (g * stacked_params) >= 0
     stacked_params.sub_(lr * g + lr * wd * stacked_params * mask)
 
