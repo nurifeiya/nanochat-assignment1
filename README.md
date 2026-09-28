@@ -165,8 +165,12 @@ This loads step 35,000 and its matching tokenizer, checks source/tokenizer hashe
 Saved JSON files contain historical absolute paths from the experiment machine; use your own run directory when reproducing. The training source files in this submission match the hashes recorded in `results/task2/run_config.json`, except for the dependency lockfile `uv.lock`. Consequently, the current lockfile should not be described as an exact copy of the original training environment. The original run's source snapshot includes its original lockfile and should be retained with the checkpoint handoff. Hardware and dependency differences can affect runtime and numerical results.
 
 ## Checkpoint downloads and handoff
+Pretrained checkpoint and matching 8K tokenizer:
+[Download the pretrained model package](https://github.com/nurifeiya/nanochat-assignment1/releases/download/pretrain-d2-8k-v1/nanochat_A_handoff_d2_8k.zip).
 
-**Pretrained package download link: pending.** The model was handed to the teammate, but an assessor-accessible download link still needs to be added here. Mid-training and SFT checkpoint links must also be supplied by the teammate.
+See the [release page](https://github.com/nurifeiya/nanochat-assignment1/releases/tag/pretrain-d2-8k-v1) for details. Follow `HANDOFF_README.md` inside the package.
+
+Mid-training and SFT checkpoint links will be added separately.
 
 The pretrained model must be loaded with the matching **8K tokenizer**, not the 32K tokenizer. A usable package includes the final weights, checkpoint metadata, `tokenizer.pkl`, `token_bytes.pt`, and the code/environment information needed to load them. The JSON checkpoint metadata committed in `results/task2/` does not contain model weights.
 
