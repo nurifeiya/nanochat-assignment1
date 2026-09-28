@@ -24,6 +24,11 @@ Main scripts:
 - `scripts/assignment1_package_handoff.py` — packages the pretrained checkpoint for handoff.
 - `verify_handoff.py` — verifies the handoff package.
 
+Checkpoint:
+
+- `checkpoints/pretrained/model_035000.pt` — pretrained checkpoint at step 35,000.
+- `checkpoints/pretrained/meta_035000.json` — checkpoint metadata.
+
 ### Task 3 — Mid-Training and Supervised Fine-Tuning
 Main implementation:
 
@@ -32,6 +37,13 @@ Main implementation:
 Results:
 
 - `results/task3_benchmark_results.csv` — ARC-Easy, ARC-Challenge, and GSM8K benchmark results across training stages.
+
+Checkpoints:
+
+- `checkpoints/midtrain/model_067455.pt` — final mid-training checkpoint at step 67,455.
+- `checkpoints/midtrain/meta_067455.json` — mid-training checkpoint metadata.
+- `checkpoints/sft/model_216770.pt` — final SFT checkpoint at step 216,770.
+- `checkpoints/sft/meta_216770.json` — final SFT checkpoint metadata.
 
 ### Task 4A — Inference and Deployment
 Main implementation:

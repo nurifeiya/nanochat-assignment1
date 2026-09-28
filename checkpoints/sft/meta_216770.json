@@ -1,0 +1,40 @@
+{
+  "step": 216770,
+  "val_bpb": 1.0381139037571625,
+  "model_config": {
+    "sequence_len": 2048,
+    "vocab_size": 8192,
+    "n_layer": 2,
+    "n_head": 1,
+    "n_kv_head": 1,
+    "n_embd": 128,
+    "window_pattern": "L"
+  },
+  "user_config": {
+    "stage": "sft",
+    "run": "dummy",
+    "device_type": "mps",
+    "model_tag": "d2_8k",
+    "model_step": 67455,
+    "load_optimizer": 0,
+    "num_iterations": -1,
+    "max_seq_len": 2048,
+    "device_batch_size": 1,
+    "total_batch_size": 2048,
+    "embedding_lr": 0.3,
+    "unembedding_lr": 0.008,
+    "matrix_lr": 0.02,
+    "init_lr_frac": 0.8,
+    "warmup_ratio": 0.0,
+    "warmdown_ratio": 0.5,
+    "final_lr_frac": 0.0,
+    "eval_every": -1,
+    "eval_tokens": 20971520,
+    "chatcore_every": -1,
+    "chatcore_max_cat": -1,
+    "chatcore_max_sample": 24,
+    "eval_only": false,
+    "mmlu_epochs": 3,
+    "gsm8k_epochs": 4
+  }
+}
