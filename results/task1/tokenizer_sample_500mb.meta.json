@@ -1,0 +1,19 @@
+{
+  "dataset": "karpathy/climbmix-400b-shuffle",
+  "source_shards": [
+    "shard_00000.parquet",
+    "shard_00001.parquet"
+  ],
+  "selection": "First nonempty documents in shard 0 then shard 1; final document UTF-8 truncated",
+  "validation_excluded": true,
+  "document_character_cap": null,
+  "target_text_bytes": 500000000,
+  "actual_text_bytes": 500000000,
+  "characters": 499213513,
+  "documents": 169970,
+  "last_document_truncated": true,
+  "sample_file_bytes": 506368636,
+  "sample_sha256": "96f2dc98afdedff2cbd9715e2ec949fea7bb7f0289ddaae077aab3c0c9de014b",
+  "python_version": "3.10.9",
+  "script_sha256": "9eeb29b56f15a0ad5d24587790c8a77c123669b162c96b82e92262226bcc2ef3"
+}
