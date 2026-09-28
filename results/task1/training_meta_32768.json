@@ -1,0 +1,52 @@
+{
+  "vocab_size_including_special_tokens": 32768,
+  "special_token_count": 9,
+  "special_tokens": [
+    "<|bos|>",
+    "<|user_start|>",
+    "<|user_end|>",
+    "<|assistant_start|>",
+    "<|assistant_end|>",
+    "<|python_start|>",
+    "<|python_end|>",
+    "<|output_start|>",
+    "<|output_end|>"
+  ],
+  "split_pattern": "'(?i:[sdmt]|ll|ve|re)|[^\\r\\n\\p{L}\\p{N}]?+\\p{L}+|\\p{N}{1,2}| ?[^\\s\\p{L}\\p{N}]++[\\r\\n]*|\\s*[\\r\\n]|\\s+(?!\\S)|\\s+",
+  "training_seconds": 25.62696408398915,
+  "sample_sha256": "96f2dc98afdedff2cbd9715e2ec949fea7bb7f0289ddaae077aab3c0c9de014b",
+  "sample_metadata": {
+    "dataset": "karpathy/climbmix-400b-shuffle",
+    "source_shards": [
+      "shard_00000.parquet",
+      "shard_00001.parquet"
+    ],
+    "selection": "First nonempty documents in shard 0 then shard 1; final document UTF-8 truncated",
+    "validation_excluded": true,
+    "document_character_cap": null,
+    "target_text_bytes": 500000000,
+    "actual_text_bytes": 500000000,
+    "characters": 499213513,
+    "documents": 169970,
+    "last_document_truncated": true,
+    "sample_file_bytes": 506368636,
+    "sample_sha256": "96f2dc98afdedff2cbd9715e2ec949fea7bb7f0289ddaae077aab3c0c9de014b",
+    "python_version": "3.10.9",
+    "script_sha256": "9eeb29b56f15a0ad5d24587790c8a77c123669b162c96b82e92262226bcc2ef3"
+  },
+  "consumed": {
+    "documents": 169970,
+    "bytes": 500000000,
+    "characters": 499213513
+  },
+  "document_character_cap": null,
+  "roundtrip_and_reload_passed": true,
+  "python_version": "3.10.9",
+  "package_versions": {
+    "rustbpe": "0.1.0",
+    "tiktoken": "0.11.0",
+    "torch": "2.9.1"
+  },
+  "script_sha256": "e6185cd78f86595d7686dd6c83555b56be6ed4f9565fef80c9387a560fd68973",
+  "tokenizer_sha256": "07d40ee8dfa36348819e1b942bd39d8d6894e177fd495d797b9d69a478f9a5b6"
+}

@@ -1,0 +1,50 @@
+{
+  "mode": "train",
+  "arguments": [
+    "--device-type=mps",
+    "--depth=2",
+    "--head-dim=128",
+    "--window-pattern=L",
+    "--max-seq-len=512",
+    "--device-batch-size=2",
+    "--total-batch-size=2048",
+    "--num-iterations=35000",
+    "--warmup-steps=40",
+    "--eval-every=500",
+    "--eval-tokens=32768",
+    "--save-every=5000",
+    "--core-metric-every=-1",
+    "--sample-every=-1",
+    "--model-tag=d2_8k",
+    "--run=dummy"
+  ],
+  "run_directory": "/Users/a8619818961844/.cache/nanochat/assignment1/pretraining_runs/d2_8k_mibnmsfu",
+  "source_hashes": {
+    "scripts/base_train.py": "87395b8078491d5088e7e8100866162b494638097215759b46d8ceb5d2f0fdcc",
+    "scripts/base_eval.py": "644083a99ded710f677b25168ca76fd0416dc7ef3890d346a72f76a20bb522fe",
+    "nanochat/gpt.py": "8cdedc2e418b9d4dc45884e07f59904fcdec066bb3d76664b2adf2d415f704e3",
+    "nanochat/optim.py": "becaea97628a86a67c9b2a3974f01553cdecfdd1a9c7b5e28e9a3b19a65349e7",
+    "nanochat/common.py": "b843db6e769db18d3364e42cb3742a9537a3d4cf43e5f098293babc7ddeb44bf",
+    "nanochat/dataset.py": "3ec2ad5987875e3d7f3ec72f08d78089fe8a3b20090448b798c21c4efb93d18a",
+    "nanochat/dataloader.py": "5cc72d7207931f112d685ba8e04c112e1a4ab7756dbbb29b95bdb4908a21864d",
+    "nanochat/tokenizer.py": "e6f12cb88fead3e6d0d45a7dd2af4192280712d92bfde83e2399cc4b3a0860fb",
+    "nanochat/loss_eval.py": "00faad1e0ae8912022f79ee4bf583c4f9b4c058e4523c5674144648c49229fd6",
+    "nanochat/flash_attention.py": "a10b0b10ad91893fcf9c9b19c96bd3468a2721cf156dcdbeeeecf05f97f22c2f",
+    "nanochat/checkpoint_manager.py": "aa63399ddaf2a0412dc099287bf0dc879f9cb0cce00f861db50eeec58746f3ba",
+    "nanochat/engine.py": "76636fc24228e72afdafe4747ff8e52a6cc60a5ec61c97205061f3bfed0a86fd",
+    "pyproject.toml": "c91fdd03ae9705565572eee31924d4c0bca24bf5431a8eabff4c061882f94929",
+    "uv.lock": "e5781572a832a650eefe821b2cf316b56673ff01b082cec3200d049b970c112c"
+  },
+  "sample_sha256": "96f2dc98afdedff2cbd9715e2ec949fea7bb7f0289ddaae077aab3c0c9de014b",
+  "tokenizer_sha256": "c91d76b443c28802a7d39dce0bd7d75e2b8b8e174d2a44a4c1bd5d385969a9ce",
+  "compile_disabled": true,
+  "dtype": "float32",
+  "trained_from_scratch": true,
+  "changes": [
+    "MPS synchronized timing",
+    "MPS optimizer scalar fix",
+    "fixed train/validation bpb and CE",
+    "JSONL logging",
+    "train CE averaged across microbatches"
+  ]
+}
