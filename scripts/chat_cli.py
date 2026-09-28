@@ -8,7 +8,9 @@ import argparse
 import torch
 from nanochat.common import compute_init, autodetect_device_type
 from nanochat.engine import Engine
-from nanochat.checkpoint_manager import load_model
+from nanochat.checkpoint_manager import load_model, load_model_from_dir
+from nanochat.common import get_base_dir
+import os
 
 parser = argparse.ArgumentParser(description='Chat with the model')
 parser.add_argument('-i', '--source', type=str, default="sft", help="Source of the model: sft|rl")
@@ -24,7 +26,23 @@ args = parser.parse_args()
 
 device_type = autodetect_device_type() if args.device_type == "" else args.device_type
 ddp, ddp_rank, ddp_local_rank, ddp_world_size, device = compute_init(device_type)
-model, tokenizer, meta = load_model(args.source, device, phase="eval", model_tag=args.model_tag, step=args.step)
+if args.source == "sft":
+    checkpoints_dir = os.path.join(get_base_dir(), "assignment1_sft_checkpoints")
+    model, tokenizer, meta = load_model_from_dir(
+        checkpoints_dir,
+        device,
+        phase="eval",
+        model_tag=args.model_tag,
+        step=args.step,
+    )
+else:
+    model, tokenizer, meta = load_model(
+        args.source,
+        device,
+        phase="eval",
+        model_tag=args.model_tag,
+        step=args.step,
+    )
 
 # Special tokens for the chat state machine
 bos = tokenizer.get_bos_token_id()

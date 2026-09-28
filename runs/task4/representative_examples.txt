@@ -1,0 +1,302 @@
+Task 4 - Representative Generation Examples
+Checkpoint: assignment1_sft_checkpoints/d2_8k/model_216770.pt
+Date: 2026年 9月27日 星期日 18时20分17秒 CEST
+
+
+################################################################
+PROMPT: What is 2 plus 2?
+################################################################
+
+============================================================
+TEMPERATURE: 0.1
+============================================================
+2026-09-27 18:20:18,201 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:18,202 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:18,216 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: To find the 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 
+
+
+============================================================
+TEMPERATURE: 0.7
+============================================================
+2026-09-27 18:20:20,378 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:20,378 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:20,389 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: Let's consider the potential 2 and 2 + 2 + 2 + 2 + 2 + 2 + 2 = 2 + 2 + 2 + 2 and 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 and 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2, and 2 + 2 + 2 + 2 + 2 and  +2 -
+
+
+============================================================
+TEMPERATURE: 1.5
+============================================================
+2026-09-27 18:20:22,254 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:22,254 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:22,265 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: Let's focus on three two 2 x 2 and x 4 is defined using only a fixed value. We have two set two sets: 2 + 2 + 2 + 5
+
+The set (n - 2) denotes different different equations:
+
+3 + 2 + 2. Since n is 3 is defined when divided by 3 (which it has it in a set, which is not zero since a 20x has no equal or equal than only every element that has no equal equal to zero. Total squ two 2 numbers are arbitrarily sorted, or if it's a fundamental result.
+
+As we have two sets include two sets, each sum itself. 
+
+- 2 sets from points in points in x is defined, we have an 2 - 2 = a. 
+
+- 2, since for any condition (where two n^2 8, the twoset that allows us to take this as (its- the set) = (if (a + 2x - 1)^2))
+
+2. 
+
+- 2 + k, in this interviewering  from values using three B.
+- (2 + (s
+
+
+################################################################
+PROMPT: Explain what a computer is in simple terms.
+################################################################
+
+============================================================
+TEMPERATURE: 0.1
+============================================================
+2026-09-27 18:20:24,147 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:24,147 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:24,159 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: A computer is in simple terms, often denoted as the "slie" or "slie" in a simple terms. It is a fundamental concept in terms of the "slie" in a simple terms. It is a fundamental concept in terms of the "slie" in a simple terms, often denoted as "slie" or "slie" in a simple terms.
+
+The "slie" in a simple terms, often denoted as "slie" in a simple terms. It is a fundamental concept in terms of the "slie" in a simple terms, often denoted as "slieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieieie
+
+
+============================================================
+TEMPERATURE: 0.7
+============================================================
+2026-09-27 18:20:26,312 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:26,312 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:26,323 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: **Emotion** is a statement that is in simple terms and are one of the most common ways to achieve the same result. The computer is in terms of the same result is in a general statement, but the problem is in a general statement. In first, the computer is in simple terms and is in a general statement, but the solution is in the in terms of the different methods. It is often used to use a more complex and straightforward phrase, or more complex phrases like "in this case," "in this case is in general and is in general."
+
+**Emotion is in general to a more formal statement or more formal statement. It's also used in general, such as in general to specific, specific, or specific to other contexts, can be a general statement or in general. 
+
+**Emotion:**
+
+1. It's a general statement:**
+
+1. It's a simpler statement:**
+   - The computer is in general, as in general, is in general to. It's often used to describe a specific statement or in general to a specific statement.
+
+1. It's an example:**
+
+1. It's a more formal statement:**
+1
+
+
+============================================================
+TEMPERATURE: 1.5
+============================================================
+2026-09-27 18:20:28,211 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:28,211 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:28,227 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: **Qucyge lies in their relationship refers to play in various ways that are non-staistical or meaning in do not be considered. Its type of data include:
+
+- Solud to help create a sense of urgency at one person who who` passion `nice`.
+- Lack of observations: It represents a "constinate event" where this events not directly conveys a sense of excitement.
+- Aneursively used for analysis and analysis
+- Comparidate between variables and the other two sources, including:
+- Counuas: Foannn.
+- Subsubs from two or two or concepts, which typically includes certain parts, including those, those that contain events based on or characteristics such as variables.
+
+Avaryon, typically used the Listal data form to representative, to inform a natural environmentary analysis using Listically connected to the context: Vastableth with other sources like numbers, number, or even number b. Avaluolas and RL.
+
+It's essential to note that the information provided by multiple sources like data are not not the solely based on meaning statistical formality rather than the not sole stat
+
+
+################################################################
+PROMPT: Write a short story about a cat.
+################################################################
+
+============================================================
+TEMPERATURE: 0.1
+============================================================
+2026-09-27 18:20:30,081 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:30,081 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:30,092 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: A cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a cat, a
+
+
+============================================================
+TEMPERATURE: 0.7
+============================================================
+2026-09-27 18:20:32,225 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:32,225 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:32,237 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: As a cat, we've had the privilege of working with many years, and we had a bit of a bit of a bit more than just a bit more than just a bit more than. To start, we'll want to show that you're just saying a bit more than just a bit more than just a bit more than just a bit more than just a bit more than one... it's a bit more than just a bit more than just a bit. It's a bit more than just a bit more than just a bit more than just a bit too. Instead of a bit more than just a bit more than just a bit than a bit more than just a bit more than just a bit more than just a bit. The idea more than just a bit. What's the most specific one, the first one would be the next one, which is the more than just a bit more than just a bit more than just a bit about a bit. And the more than just a bit more than just a bit more.<|assistant_end|>
+
+
+============================================================
+TEMPERATURE: 1.5
+============================================================
+2026-09-27 18:20:34,011 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:34,011 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:34,022 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: As a masie, a glost around the scene, the f How may occur in the hoir tends to achieve the entire passage of your paragag old gies.
+
+We start by arranged out at where the atmosphere is [emore value] * [emore value]
+  (emore value + 75 / lo enumators)
+
+Since any, this means of the scene are all prior information, this creates firks about this air. For these flaws, the firks about a particular ruster for that's often known when you're more sensitive than just static than a particular rustye? For example, where the atmosphere is an atmosphere and size that can result in an image – one can happen in various contexts. We also see these flates and add up yours, resulting in an surface where the atmosphere has a result rather than stirring evidence further.<|assistant_end|>
+
+
+################################################################
+PROMPT: Give me three tips for studying effectively.
+################################################################
+
+============================================================
+TEMPERATURE: 0.1
+============================================================
+2026-09-27 18:20:35,727 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:35,727 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:35,738 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: Absolutely, here are some tips for studying effectively:
+
+1. **Clear**: The **clear**, on the other hand, is a** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **clear** The **cle
+
+
+============================================================
+TEMPERATURE: 0.7
+============================================================
+2026-09-27 18:20:37,616 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:37,616 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:37,631 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: Determining three tips for study effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively sets effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively clearly effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively communatively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively immediately effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively distribates effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectivelyles effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively efficiently effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively sets effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively effectively
+
+
+============================================================
+TEMPERATURE: 1.5
+============================================================
+2026-09-27 18:20:39,546 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:20:39,546 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:20:39,557 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: Dark on my #ages can help refine re-examine a specific class that values a specific value a certain object of both your own own equal. This involves working together, exploring common problems or situations where you know the type of multiple functions on your original b proposition or different types of characters, or they might have a particular character.
+
+In general, on the other hand, here are a few approaches to help refine the revading dumididation:
+
+One of the primary characteristics such as a "many" or a "r" a certain types of distinct object.
+Factor of different types of numbers, like the "runse" or a specific style, where there are unorigil, such as a sentimensional event, but they tend to provide a narrative piece that are distinct but are often applied in interventions such as multiple objectives, with higher-pricanded fights and different types used in terms of its values, which may come in.
+Adding these elements to the next step: if their current character has not found any distinct components, but they are not a certain type not, with their same or other types of values like strination to handle non-negotiable functions
+
+2026-09-28 20:38:03,227 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-28 20:38:03,255 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+
+################################################################
+PROMPT: What is the capital of France?
+################################################################
+
+============================================================
+TEMPERATURE: 0.1
+============================================================
+
+Assistant: The key is the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key to the key is to the key to the key is to the key to the key to the key is to the key to the key. By the key to the key is to the key is to the key to the key is to the key.
+
+============================================================
+TEMPERATURE: 0.7
+============================================================
+
+Assistant: emememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememememem
+
+============================================================
+TEMPERATURE: 1.5
+============================================================
+
+Assistant: em can influence influence while
+
+Second:
+
+ It It uses the built-in workflow but also a personal concern, confidential nature. My career is the long-term implications and challenges required, while its impact is consistent across different ways throughout the writing. They tend to thrive within and are relatively deep in various ways and have the necessary information, as they requireced to navigate further exploration process like the long-term consequences of their efforts.
+
+You will also explore options with multiple people that influence the decision or their motivations.
+
+In the first term, you could prioritize people from one another is also more consistent,(s) can better decision-making and improve overall well-being within others. Additionally, working with multiple people to complete data that may have significant consequences.
+
+As you think you believe in maintaining these differences, we could develop long-term performance for your career, even in short-term career prospects. By identifying factors rather than considering potential consequences before reducing the impact on making, you can reduce the need for better better outcomes.

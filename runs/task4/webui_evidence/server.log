@@ -1,0 +1,85 @@
+2026-09-27 18:55:14,112 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+INFO:     Started server process [54304]
+INFO:     Waiting for application startup.
+2026-09-27 18:55:14,180 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:55:14,193 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Starting NanoChat Web Server
+Temperature: 0.7, Top-k: 50, Max tokens: 512
+Loading nanochat models across GPUs...
+Initializing worker pool with 1 GPUs...
+Loading model on mps...
+All 1 workers initialized!
+Server ready at http://localhost:8000
+INFO:     127.0.0.1:52732 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52732 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52732 - "GET /logo.svg HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/responses.py", line 352, in __call__
+    stat_result = await anyio.to_thread.run_sync(os.stat, self.path)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2641, in run_sync_in_worker_thread
+    return await future
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1033, in run
+    result = context.run(func, *args)
+FileNotFoundError: [Errno 2] No such file or directory: 'nanochat/logo.svg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/middleware/cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/fastapi/routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/fastapi/routing.py", line 1281, in handle
+    await super().handle(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/fastapi/routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/fastapi/routing.py", line 145, in app
+    await response(scope, receive, send)
+  File "/Users/binghaoguo/Desktop/agentLLM/nanochat-assignment1/.venv/lib/python3.10/site-packages/starlette/responses.py", line 355, in __call__
+    raise RuntimeError(f"File at path {self.path} does not exist.")
+RuntimeError: File at path nanochat/logo.svg does not exist.
+2026-09-27 19:08:24,604 - __main__ - [32m[1mINFO[0m - ====================
+2026-09-27 19:08:24,604 - __main__ - [32m[1mINFO[0m - [USER]: What is the capital of France?
+2026-09-27 19:08:24,605 - __main__ - [32m[1mINFO[0m - --------------------
+INFO:     127.0.0.1:52734 - "POST /chat/completions HTTP/1.1" 200 OK
+2026-09-27 19:08:25,673 - __main__ - [32m[1mINFO[0m - [ASSISTANT] (GPU 0): The capital of Paris of Paris Paya is the capital of Paris Paya, a significant investment in the realm for the city. It's a popular choice like this. It's a great way to think about how to make the city feel more likely to feel more comfortable or comfortable.
+
+First, it's essential to understand the idea and what's the capital of Paris, of praise, and what it's the "hourist" the "hourist the." It's a great choice to think about how to make the city feel more comfortable with. You'll also ask if there's a good idea, which does not add any of the city.
+
+The capital of Paris. A great choice for this city is a great choice. I make it clear that you're using a great choice to create a sense of momentum and momentum. You'll also ask you a few questions, but to make it a great choice, and, if you're willing to don't want to think about the city's to make it just right. You'll also ask you the city about your city, any additional questions, or any more questions about what's the "hourist the "hourist the" the world. If you need to ask, please let me know what's most important to you.
+2026-09-27 19:08:25,673 - __main__ - [32m[1mINFO[0m - ====================
