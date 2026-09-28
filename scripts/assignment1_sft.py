@@ -75,6 +75,8 @@ parser.add_argument("--eval-tokens", type=int, default=40*524288, help="number o
 parser.add_argument("--chatcore-every", type=int, default=200, help="evaluate ChatCORE metric every N steps (-1 = disable)")
 parser.add_argument("--chatcore-max-cat", type=int, default=-1, help="max problems per categorical task for ChatCORE")
 parser.add_argument("--chatcore-max-sample", type=int, default=24, help="max problems per generative task for ChatCORE")
+parser.add_argument("--eval-only", action="store_true", help="evaluate ARC-Easy/ARC-Challenge/GSM8K and exit without training")
+parser.add_argument("--eval-source", choices=["base", "midtrain", "sft"], default=None, help="checkpoint source used only with --eval-only")
 # Data mixture
 parser.add_argument("--mmlu-epochs", type=int, default=3, help="number of epochs of MMLU in training mixture (teaches Multiple Choice)")
 parser.add_argument("--gsm8k-epochs", type=int, default=4, help="number of epochs of GSM8K in training mixture (teaches Math and Tool Use)")
@@ -105,7 +107,30 @@ if not HAS_FA3:
     print0("WARNING: Flash Attention 3 not available, using PyTorch SDPA fallback. Training will be less efficient.")
 
 # Load the model and tokenizer
-if args.stage == "midtrain":
+if args.eval_only and args.eval_source is not None:
+    if args.eval_source == "base":
+        model, tokenizer, meta = load_model(
+            "base",
+            device,
+            phase="eval",
+            model_tag=args.model_tag,
+            step=args.model_step,
+        )
+    else:
+        checkpoint_root = (
+            "assignment1_midtrain_checkpoints"
+            if args.eval_source == "midtrain"
+            else "assignment1_sft_checkpoints"
+        )
+        checkpoint_dir = os.path.join(get_base_dir(), checkpoint_root)
+        model, tokenizer, meta = load_model_from_dir(
+            checkpoint_dir,
+            device,
+            phase="eval",
+            model_tag=args.model_tag,
+            step=args.model_step,
+        )
+elif args.stage == "midtrain":
     model, tokenizer, meta = load_model(
         "base",
         device,
@@ -149,6 +174,34 @@ for name, fallback, source in [
 # Save resolved runtime values after checkpoint inheritance.
 # Stage 2 can therefore inherit the actual Stage 1 configuration.
 user_config = vars(args).copy()
+
+# Assignment 1 benchmark-only evaluation.
+# With --stage=sft, the model loaded above is the Stage 1 checkpoint from
+# assignment1_midtrain_checkpoints.
+if args.eval_only:
+    model.eval()
+    engine = Engine(model, tokenizer)
+
+    for task_name in ["ARC-Easy", "ARC-Challenge", "GSM8K"]:
+        if task_name in {"ARC-Easy", "ARC-Challenge"}:
+            limit = args.chatcore_max_cat
+        else:
+            limit = args.chatcore_max_sample
+
+        max_problems = None if limit < 0 else limit
+
+        acc = run_chat_eval(
+            task_name,
+            model,
+            tokenizer,
+            engine,
+            batch_size=args.device_batch_size,
+            max_problems=max_problems,
+        )
+        print0(f"{task_name}: {100 * acc:.2f}%")
+
+    compute_cleanup()
+    raise SystemExit(0)
 
 orig_model = model
 model = torch.compile(model, dynamic=False)
@@ -271,26 +324,46 @@ def sft_data_generator_bos_bestfit(split, buffer_size=100):
     # Conversation buffer: list of (token_ids, loss_mask) tuples
     conv_buffer = []
     cursor = ddp_rank  # Each rank processes different conversations (for fetching)
-    consumed = ddp_rank  # Track actual consumption separately from buffering
+    consumed = ddp_rank  # Track conversations actually packed into batches
+    fetched_train_examples = 0  # Raw train examples inspected in this full-epoch run
     epoch = 1
     it = 0  # iteration counter
 
     def refill_buffer():
-        nonlocal cursor, epoch
+        nonlocal cursor, epoch, fetched_train_examples
+
         while len(conv_buffer) < buffer_size:
+            # For a full-epoch training run, inspect every raw dataset row once.
+            if (
+                split == "train"
+                and args.num_iterations <= 0
+                and fetched_train_examples >= dataset_size
+            ):
+                break
+
             conversation = dataset[cursor]
             ids, mask = tokenizer.render_conversation(conversation)
+
+            if split == "train" and args.num_iterations <= 0:
+                fetched_train_examples += ddp_world_size
+
+            # Advance even when this example has no supervised targets.
+            cursor += ddp_world_size
+            if cursor >= dataset_size:
+                cursor = cursor % dataset_size
+                epoch += 1
+
             if len(ids) > row_capacity:
                 raise ValueError(
                     f"Rendered {split} conversation has {len(ids)} tokens, "
                     f"exceeding row capacity {row_capacity}. Increase --max-seq-len."
                 )
+
+            # A row with no assistant targets contributes no SFT gradient.
+            if not any(mask):
+                continue
+
             conv_buffer.append((ids, mask))
-            cursor += ddp_world_size
-            if cursor >= dataset_size:
-                cursor = cursor % dataset_size
-                epoch += 1
-                # Note: last_step is now triggered based on consumption, not fetching
 
     while True:
         rows = []
@@ -301,9 +374,19 @@ def sft_data_generator_bos_bestfit(split, buffer_size=100):
             mask_row = []
             padded = False
             while len(row) < row_capacity:
-                # Ensure buffer has conversations
-                while len(conv_buffer) < buffer_size:
+                # Keep the buffer filled while raw examples remain.
+                if len(conv_buffer) < buffer_size:
                     refill_buffer()
+
+                # At the end of a full epoch, drain the remaining usable
+                # conversations and then pad the final row.
+                if not conv_buffer:
+                    remaining = row_capacity - len(row)
+                    content_len = len(row)
+                    row.extend([bos_token] * remaining)
+                    mask_row.extend([0] * remaining)
+                    padded = True
+                    break
 
                 remaining = row_capacity - len(row)
 
@@ -343,11 +426,12 @@ def sft_data_generator_bos_bestfit(split, buffer_size=100):
 
         # Update progress tracking (based on consumed, not cursor, to account for buffering)
         if split == "train":
-            current_epoch = max(1, consumed // dataset_size + 1)
+            current_epoch = 1 if args.num_iterations <= 0 else max(1, consumed // dataset_size + 1)
             if args.num_iterations <= 0:
-                approx_progress = min(consumed / dataset_size, 1.0)
-                # Dataset consumption controls termination only for full-epoch runs.
-                if consumed >= dataset_size:
+                approx_progress = min(fetched_train_examples / dataset_size, 1.0)
+                # Finish only after every raw row has been inspected once and
+                # every usable conversation already in the buffer has been drained.
+                if fetched_train_examples >= dataset_size and not conv_buffer:
                     last_step = True
 
         # Build tensors

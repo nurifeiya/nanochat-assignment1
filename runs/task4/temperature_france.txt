@@ -1,0 +1,62 @@
+Task 4 - Temperature Sampling Experiment
+Checkpoint: assignment1_sft_checkpoints/d2_8k/model_216770.pt
+Model: depth=2, n_head=1, n_embd=128, vocab_size=8192
+Date: 2026年 9月27日 星期日 18时19分53秒 CEST
+
+============================================================
+PROMPT: What is the capital of France?
+TEMPERATURE: 0.1
+============================================================
+2026-09-27 18:19:54,711 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:19:54,711 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:19:54,722 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The capital of Paris. It's a great way to explore the city of Paris, and it's a great way to explore the city of Paris. It's a great way to explore the city of Paris, and it's a great way to explore the city of Paris. It's a great way to explore the city of Paris, and it's a great way to explore the city of Paris.
+
+The city of Paris is a great way to explore the city of Paris, which is a great way to explore the city of Paris. It's a great way to explore the city of Paris, and it's a great way to explore the city of Paris. It's a great way to explore the city of Paris, and it's a great way to explore the city of Paris.<|assistant_end|>
+
+============================================================
+PROMPT: What is the capital of France?
+TEMPERATURE: 0.7
+============================================================
+2026-09-27 18:19:56,490 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:19:56,490 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:19:56,501 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: Sure, the capital of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of the Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of L of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par ofThe of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par of Par
+
+============================================================
+PROMPT: What is the capital of France?
+TEMPERATURE: 1.5
+============================================================
+2026-09-27 18:19:58,522 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-27 18:19:58,522 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /Users/binghaoguo/Downloads/nanochat_A_handoff/model_data/assignment1_sft_checkpoints/d2_8k with step 216770
+2026-09-27 18:19:58,533 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 8192, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: Sherizing behind in Parquart 183-1-5,ating about six66. These include those: Arnnnnnnnnnnnnn1xnn6(nn nnnnx andnnnnnnn1n.nnnn(kn3)
+print(calcul number):nnnnn(nnnnnnne nennnnn
+ages ofn(nnnnnn0n byn3nn4)nnnnnnn
+ages and nnnnnnnnnrnnnn.
+
+Let's break it this down.
+
+When x0, consider the "necessary the "gree the The "content Sk + "onso," to evaluate this examine for grammar of the work example. The "seign PT F(d)(nnnn(nnnnnnennnnnnn4n1nnnnnnnnnn1nnn3nnnnnnnnrnn(nnn3
+
